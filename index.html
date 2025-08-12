@@ -1,103 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stewart Datawright Labs - Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .bg-hero { background-color: #111827; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stewart Datawright Labs — Crafting Data & Apps</title>
+  <meta name="description" content="Stewart Datawright Labs builds data pipelines, custom apps, and mobile utilities. C#, SQL, ETL, SSIS expertise. Contact us for project work.">
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Stewart Datawright Labs">
+  <meta property="og:description" content="Crafting data solutions & building digital experiences.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts + Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon (replace files in root) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    :root { --brand: #dc2626; }
+    html,body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    /* small visual polish */
+  </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-slate-800">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3">
-                <div style="width: 40px; height: 40px; background-color: #dc2626; border-radius: 0.25rem; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 1.25rem; letter-spacing: -1px; flex-shrink: 0;">
-                  SW
-                </div>
-                <span class="text-2xl font-bold text-gray-900">Stewart Datawright <span class="text-red-600 font-normal">Labs</span></span>
-            </a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-red-600 font-semibold border-b-2 border-red-600">Home</a>
-                <a href="about.html" class="text-gray-600 hover:text-red-600 transition-colors">About</a>
-                <a href="projects.html" class="text-gray-600 hover:text-red-600 transition-colors">Projects</a>
-                <a href="contact.html" class="text-gray-600 hover:text-red-600 transition-colors">Contact</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-gray-800">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="index.html" class="block py-2 text-red-600 font-semibold">Home</a>
-            <a href="about.html" class="block py-2 text-gray-600 hover:text-red-600">About</a>
-            <a href="projects.html" class="block py-2 text-gray-600 hover:text-red-600">Projects</a>
-            <a href="contact.html" class="block py-2 text-gray-600 hover:text-red-600">Contact</a>
-        </div>
-    </header>
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-sm shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-4">
+        <img src="Stewart Datawright Labs Logo.png" alt="Stewart Datawright Labs logo" class="h-12 w-auto object-contain">
+        <span class="hidden sm:inline-block font-semibold">Stewart Datawright Labs</span>
+      </a>
 
-    <main>
-        <section class="bg-hero text-white">
-            <div class="container mx-auto px-6 py-24 text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Crafting Data Solutions, Building Digital Experiences.</h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">From complex data pipelines to intuitive mobile apps, we build software that is powerful, precise, and purposeful.</p>
-                <a href="projects.html" class="mt-8 inline-block bg-red-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition-transform transform hover:scale-105">Explore Our Work</a>
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+        <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-[var(--brand)]">Home</a>
+        <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-[var(--brand)]">About</a>
+        <a href="projects.html" class="text-sm font-medium text-slate-700 hover:text-[var(--brand)]">Projects</a>
+        <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-[var(--brand)]">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden md:inline-block text-sm font-semibold px-4 py-2 rounded-md border border-[var(--brand)] text-[var(--brand)] hover:bg-[var(--brand)] hover:text-white transition">Work with us</a>
+
+        <button id="mobile-toggle" class="md:hidden p-2 rounded-md" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t">
+      <div class="px-6 pb-6 space-y-2">
+        <a href="index.html" class="block py-2 text-sm font-medium">Home</a>
+        <a href="about.html" class="block py-2 text-sm font-medium">About</a>
+        <a href="projects.html" class="block py-2 text-sm font-medium">Projects</a>
+        <a href="contact.html" class="block py-2 text-sm font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+      <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 lg:py-36 flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">Crafting data solutions & building thoughtful apps</h1>
+          <p class="mt-4 text-slate-200 max-w-2xl">From robust ETL and data integration to custom desktop & mobile applications, we deliver tools that are reliable, maintainable, and built to solve real business problems.</p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="projects.html" class="inline-block bg-[var(--brand)] text-white font-semibold px-5 py-3 rounded-md shadow hover:scale-[1.02] transition">Explore projects</a>
+            <a href="contact.html" class="inline-block border border-white text-white px-4 py-3 rounded-md hover:bg-white hover:text-[var(--brand)] transition">Start a project</a>
+          </div>
+
+          <ul class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-slate-300 text-sm">
+            <li><strong class="text-white">Stack:</strong> C#, SQL, SSIS</li>
+            <li><strong class="text-white">Specialties:</strong> ETL, Data Integration</li>
+            <li><strong class="text-white">Platforms:</strong> Desktop, Web, Mobile</li>
+          </ul>
+        </div>
+
+        <div class="lg:w-1/2 flex justify-center">
+          <!-- Simple illustrative card -->
+          <div class="w-full max-w-md bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
+            <img src="robert-stewart-headshot.png" alt="Robert Stewart headshot" class="rounded-xl w-36 h-36 object-cover mx-auto shadow-lg">
+            <h3 class="text-lg font-bold text-white text-center mt-4">Robert Stewart</h3>
+            <p class="text-slate-300 text-center text-sm">Founder · Data Engineer · Software Craftsman</p>
+
+            <div class="mt-6 space-y-2 text-sm text-slate-300">
+              <p>I build clean, testable systems for businesses that rely on accurate, timely data.</p>
+              <p class="opacity-80">Want a short intro call? <a href="contact.html" class="text-white underline">Let’s talk</a>.</p>
             </div>
-        </section>
-
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold">What We Build</h2>
-                    <p class="text-gray-600 mt-2">A fusion of expert craftsmanship and modern innovation.</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path><path d="M4 12h16"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Data Integration & ETL</h3>
-                        <p class="text-gray-600">Robust, scalable solutions for data transformation, migration, and automation, specializing in SSIS and SQL.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                         <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Custom Applications</h3>
-                        <p class="text-gray-600">Desktop and web applications built with C# and modern frameworks to solve unique business challenges.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Mobile Apps & Add-ons</h3>
-                        <p class="text-gray-600">Innovative utilities and add-ons for iOS and Android, designed to enhance productivity and entertainment.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; 2025 Stewart Datawright Labs. All Rights Reserved.</p>
-            <p class="text-sm text-gray-400 mt-2">A modern software studio.</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="p-6 border rounded-lg shadow-sm hover:shadow-md transition">
+          <h4 class="font-semibold text-lg">Data Integration & ETL</h4>
+          <p class="mt-2 text-sm text-slate-600">Design and operate reliable pipelines (SSIS, SQL) for migration, consolidation, and reporting.</p>
+        </article>
+        <article class="p-6 border rounded-lg shadow-sm hover:shadow-md transition">
+          <h4 class="font-semibold text-lg">Custom Applications</h4>
+          <p class="mt-2 text-sm text-slate-600">Internal tools, desktop apps and services written in C# and .NET that increase productivity.</p>
+        </article>
+        <article class="p-6 border rounded-lg shadow-sm hover:shadow-md transition">
+          <h4 class="font-semibold text-lg">Mobile Utilities & Add‑ons</h4>
+          <p class="mt-2 text-sm text-slate-600">Small, focused apps and extensions that solve specific user problems on iOS/Android.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Example Projects / CTA -->
+    <section class="bg-gray-50 py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xl font-bold">Selected Work</h2>
+          <a href="projects.html" class="text-sm font-medium text-[var(--brand)]">See all projects →</a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project card (replace images and content) -->
+          <div class="p-4 bg-white rounded-lg border shadow-sm">
+            <div class="h-40 bg-slate-100 rounded-md flex items-center justify-center text-slate-400">Project screenshot</div>
+            <h3 class="mt-3 font-semibold">ETL Modernization</h3>
+            <p class="text-sm text-slate-600 mt-1">Refactored legacy SSIS packages, improved performance and monitoring.</p>
+          </div>
+
+          <div class="p-4 bg-white rounded-lg border shadow-sm">
+            <div class="h-40 bg-slate-100 rounded-md flex items-center justify-center text-slate-400">Internal App</div>
+            <h3 class="mt-3 font-semibold">Back‑Office Tooling</h3>
+            <p class="text-sm text-slate-600 mt-1">Desktop utilities to automate repetitive admin tasks.</p>
+          </div>
+
+          <div class="p-4 bg-white rounded-lg border shadow-sm">
+            <div class="h-40 bg-slate-100 rounded-md flex items-center justify-center text-slate-400">Mobile add‑on</div>
+            <h3 class="mt-3 font-semibold">Mobile Productivity Add‑On</h3>
+            <p class="text-sm text-slate-600 mt-1">Lightweight utility delivered on iOS and Android.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / Contact CTA -->
+    <footer class="bg-slate-900 text-slate-200">
+      <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">
+        <div>
+          <h4 class="font-bold text-white">Stewart Datawright Labs</h4>
+          <p class="text-sm mt-2">Crafting reliable software and data systems. <br>Robert Stewart — Founder</p>
+        </div>
+
+        <div>
+          <h5 class="font-semibold">Quick Links</h5>
+          <ul class="mt-3 text-sm space-y-2">
+            <li><a href="about.html" class="hover:underline">About</a></li>
+            <li><a href="projects.html" class="hover:underline">Projects</a></li>
+            <li><a href="contact.html" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="font-semibold">Contact</h5>
+          <p class="text-sm mt-2">Email: <a href="mailto:hello@stewartdatalabs.com" class="underline">hello@stewartdatalabs.com</a></p>
+          <p class="text-sm mt-1">© 2025 Stewart Datawright Labs</p>
+        </div>
+      </div>
     </footer>
+  </main>
 
-    <script>
-        // JavaScript for mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+  <script>
+    // small client-side improvements
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileToggle?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
+    // accessible skip link support
+    (function(){
+      const skip = document.createElement('a');
+      skip.href = '#main-content';
+      skip.textContent = 'Skip to content';
+      skip.className = 'sr-only focus:not-sr-only absolute left-4 top-4 bg-white text-black px-3 py-1 rounded';
+      document.body.prepend(skip);
+    })();
+  </script>
 </body>
 </html>
